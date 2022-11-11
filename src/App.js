@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Header } from "./components/Header/Header";
 import { useTelegram } from "./hooks/useTelegram";
 
 
@@ -11,6 +12,7 @@ tg.ready()
 
   return (
     <div> 
+    <Header/>
     <button onClick={onToggleButton}>toggle</button>
     </div>
   );
