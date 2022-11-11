@@ -1,17 +1,15 @@
 import { useEffect } from "react";
 
-let tg = window.Telegram.WebApp; 
+
 
 function App() {
-useEffect(()=>{
-tg.ready()
-}, [])
-const onClose =()=>{
-tg.close()
-}
+// useEffect(()=>{
+// tg.ready()
+// }, [])
+
   return (
     <div> fgg
-    <button onClick={onClose}>Закрыть</button>
+    <button >Закрыть</button>
     </div>
   );
 }
