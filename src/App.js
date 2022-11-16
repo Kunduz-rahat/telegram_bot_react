@@ -8,19 +8,20 @@ import { useTelegram } from "./hooks/useTelegram";
 
 
 function App() {
-  const {onToggleButton, tg} = useTelegram()
-useEffect(()=>{
-tg.ready()
-}, [])
+  const { tg} = useTelegram();
+
+  useEffect(() => {
+      tg.ready();
+  }, [])
 
   return (
-    <div> 
-    <Header/>
-  <Routes>
-    <Route index element={<ProductList/>}/>
-    <Route path={'form'} element={<Form/>}/>
-  </Routes>
-    </div>
+      <div className="App">
+          <Header />
+          <Routes>
+              <Route index element={<ProductList />}/>
+              <Route path={'form'} element={<Form />}/>
+          </Routes>
+      </div>
   );
 }
 
